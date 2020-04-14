@@ -45,7 +45,7 @@ We will always receive `Failure` message. And this is sad.
 But now we can use this library for checking:
 
 ```php
-use function yaronius\ExternalInterfaceMatcher\class_provides;
+use function yaronius\ImplicitInterface\class_provides;
 
 $instance = new DeepThought();
 if (class_provides($instance, DeepThoughtInterface::class)) {
