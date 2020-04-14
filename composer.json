@@ -1,0 +1,25 @@
+{
+    "name": "yaronius/php-implicit-interface-checker",
+    "require-dev": {
+        "phpunit/phpunit": "^9.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yaroslav Zborovsky",
+            "email": "yaroslav.zborovsky@betterme.world"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "src/functions.php"
+        ],
+        "psr-4": {
+            "yaronius\\ImplicitInterface\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "require": {}
+}
