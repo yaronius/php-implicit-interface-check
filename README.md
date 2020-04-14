@@ -42,7 +42,7 @@ if ($instance instanceof DeepThoughtInterface::class) {
 ```
 
 We will always receive `Failure` message. And this is sad. 
-But now we can use this library for checking:
+But now we can use our ~~library~~ function  for checking:
 
 ```php
 use function yaronius\ImplicitInterface\class_provides;
@@ -59,6 +59,7 @@ Now we get `Success`! Finally!
     
 ## TODO
 
+- make it kinda library =)
 - more OOP 
 - more tests
 - benchmark performance impact
