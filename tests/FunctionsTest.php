@@ -6,19 +6,19 @@ namespace yaronius\ImplicitInterface\tests;
 
 use PHPUnit\Framework\TestCase;
 
-use function yaronius\ImplicitInterface\class_provides;
+use function yaronius\ImplicitInterface\class_complies_with;
 
 class FunctionsTest extends TestCase
 {
     public function testClassProvidesFunction()
     {
-        $this->assertTrue(class_provides(AbstractFoo::class, FooInterface::class));
-        $this->assertTrue(class_provides(Foo::class, FooInterface::class));
+        $this->assertTrue(class_complies_with(AbstractFoo::class, FooInterface::class));
+        $this->assertTrue(class_complies_with(Foo::class, FooInterface::class));
 
-        $this->assertTrue(class_provides(new Foo, FooInterface::class));
+        $this->assertTrue(class_complies_with(new Foo, FooInterface::class));
 
-        $this->assertTrue(class_provides(new Bar, BarInterface::class));
-        $this->assertFalse(class_provides(new Bar, BazInterface::class));
+        $this->assertTrue(class_complies_with(new Bar, BarInterface::class));
+        $this->assertFalse(class_complies_with(new Bar, BazInterface::class));
     }
 }
 
