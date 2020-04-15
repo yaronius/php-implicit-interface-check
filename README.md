@@ -1,5 +1,5 @@
 # PHP implicit interface checker
-Simple reflection-based ~~library~~ function to check if a class matches an external interface (i.e. an interface
+Simple reflection-based library to check if a class matches an external interface (i.e. an interface
 that is not implemented by this class, but probably having the same method signatures).
 
 ## Wait, but why?
@@ -45,7 +45,7 @@ We will always receive `Failure` message. And this is sad.
 But now we can use this library for checking:
 
 ```php
-use function yaronius\ExternalInterfaceMatcher\class_complies_with;
+use function yaronius\ImplicitInterface\class_complies_with;
 
 $instance = new DeepThought();
 if (class_complies_with($instance, DeepThoughtInterface::class)) {
